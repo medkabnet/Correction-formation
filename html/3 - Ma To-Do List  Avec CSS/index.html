@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Lier les fichier de style style.css -->
+    <link rel="stylesheet" href="./style/style.css">
+    
+    <style>
+        body{
+            /* Ajouter une image de fond a tout la page */
+            background-image: url(./img/paper.gif);
+
+            /* Les marge exter = 0px */
+            margin : 0px;
+
+            /* Largeur = largeur de la fenétre  */
+            width:100vw ;
+        }
+
+        /* séléctionner tout les H1 
+            changer le taill du texte à 3.5em
+        */
+        h1{
+            font-size : 3.5em;
+        }
+
+        /* changer  `selecteur`par le sélecteur qui permet de selection la balise <i> qui setrouve dans <h1> */
+        #h1_italique{
+            /* Changer la couleur du texte */
+            color: red;
+
+            /* Souligner la balise */
+            text-decoration: underline solid;
+
+            /* Changer la couleur de la ligne */
+            text-decoration-color: crimson;
+        }
+
+        /* changer  `selecteur`par le sélecteur qui permet de selection tout les premier <td> dans chaque <tr> */
+        .col-1{
+            width: 75%;
+        }
+
+        #boutton{
+            display : block;
+            margin: 0 auto;
+            
+            /* ajouter des marge an haut de 15px*/
+            margin-top: 15px;
+
+            /* largeur = 90% */
+            width: 90%;
+
+            /* la taille du text = 1.2em */
+            font-size: 1.2em;
+
+            /* marge interne = 10px */
+            padding: 10px;
+
+            /* couleur d'arrière plan = rgb(133, 122, 204) */
+            background-color: rgb(133, 122, 204);
+
+            /* arrondir la bordure = 25px */
+            border-radius : 25px;
+        }
+    </style>
+    <title>Ma To-Do List</title>
+</head>
+<body>
+    <header style="padding-bottom: 15px;">
+        <img id="img" src="./img/logo-Atlentique.png" alt="Logo centre" >
+        <!-- Ajouter un id à la balise <h1> -->
+        <h1 >Ma <i id="h1_italique">To-Do</i> List</h1>
+    </header>
+    <div>
+        <p >C'est ma <b><u><i>To-Do list</i></u></b> d'aujourd'hui <br>j'ai plusieur tache a faire</p>
+        <ol>
+            <li>Cour HTML  : 
+                <!-- Ajouter une  class à la balise <select> -->
+                <select class="class_input" >
+                    <option disabled selected hidden> Choisir un cour</option>
+                    <option>
+                        Les base
+                    </option>
+                    <option >
+                        Les balises
+                    </option>
+                </select>
+            </li>
+            <li>
+                Exercices html :
+                <ul>
+                    <li>
+                        <input type="checkbox" value="Exercices 1"> <a href="#">Exercie 1</a> 
+                    </li>
+                    <li>
+                        <input type="checkbox" value="Exercices 2"> <a href="#">Exercie 2</a> 
+                    </li>
+                    <li>
+                        <input type="checkbox" value="Exercices 3"> <a href="#">Exercie 3</a> 
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox"> Code CSS : 
+                <ul>
+                    <li>balise Style</li>
+                    <li>Attribue Style</li>
+                    <li>Lien CSS</li>
+                </ul>
+            </li>
+            <li>
+                Exercies CSS : <input class="class_input" type="text">
+            </li>
+        </ol>
+        <hr>
+        <form id="mon_formulaire">
+            <h2>Valider ma To-Do list</h2>
+            <table style="width: 100%;">
+                <tr>
+                    <td class="col-1">
+                        <label >Date du Jour</label>
+                    </td>
+                    <td >
+                        <!-- Ajouter une  class à la balise <input> -->
+                        <input class="class_input" type="text"  value ="30/4/2022" readonly>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td class="col-1"> 
+                        <label >Votre Nom</label>
+                    </td>
+                    <td>
+                        <!-- Ajouter une  class à la balise <input> -->
+                        <input class="class_input" type="text"  placeholder="Votre Nom">
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td class="col-1">
+                        <label >Votre Email</label>
+                    </td>
+                    <td>
+                        <!-- Ajouter une  class à la balise <input> -->
+                        <input class="class_input" type="email"  placeholder="Votre Email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-1">
+                        <label >Votre Mot de pass</label>
+                    </td>
+                    <td>
+                        <!-- Ajouter une  class à la balise <input> -->
+                        <input class="class_input" type="password" placeholder="Votre Mot de pass" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-1">
+                        <label >Votre Genre</label>
+                    </td>
+                    <td>
+                        <input type="Radio"   name = "genre" value = "Homme" checked>Homme 
+                        <input type="Radio"   name = "genre" value = "Femme">Femme 
+                    </td>
+                </tr>
+            </table>
+            <input id="boutton" type="button" value="Valider">
+        </form>
+        <hr>
+    </div>
+    <footer>
+        <nav>
+            <a href="https://facebook.com/" target="_blank">Facebook</a>
+            |
+            <a href="https://instagram.com/" target="_blank">Instagram</a>
+            |
+            <a href="https://youtube.com/" target="_blank">Youtube</a>
+        </nav>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Exercice 6</title>
+</head>
+<body>
+    <h1>Exercice 6</h1>
+    <img id="imageChanger" src="" alt="Image à changer">
+
+    <button id="btnChangerImage">Changer l'Image</button>
+
+    <script>
+        const listImag = [
+            "./Img/img1.jpeg",
+            "./Img/img2.jpeg",
+            "./Img/img3.jpeg",
+            "./Img/img4.jpeg"
+        ];
+
+        var btnChangerImage = document.getElementById("btnChangerImage");
+        var imageChanger = document.getElementById("imageChanger");
+        var indexImg = 0;
+
+        btnChangerImage.addEventListener("click",()=>{
+            var url = listImag[indexImg];
+            imageChanger.setAttribute("src",url);
+            indexImg++;
+            if(indexImg == 4){
+                indexImg = 0;
+            }
+        })
+    </script>
+</body>
+</html>

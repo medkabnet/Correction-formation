@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Créez un code JavaScript qui permet à un surveillant général d'entrer le nombre d'élèves dans une
+        classe. Ensuite, le programme demandera le nom de chaque élève et sa note via une boîte de dialogue (prompt)
+        dans une boucle pour les ajouter dans un tableau , chaque élève a son Objet JSON . À la fin, le programme affichera la note moyenne .
+    </p>
+    <script>
+
+        var nomber_eleve=Number(prompt("enter les nomber des eleve:")) 
+        var tableau_eleve=[]
+        var moyenne_eleve=0
+        for(let i=0 ;i<nomber_eleve;i++){
+            var nom_eleve=prompt("entre le nom de eleve:")
+            var note_eleve=Number(prompt("entre la note de eleve:"))
+            var eleve={
+                "Nom":nom_eleve,
+                "Note":note_eleve,
+            }
+            moyenne_eleve+=note_eleve
+            tableau_eleve.push(eleve)
+        }
+        var resulta=moyenne_eleve/nomber_eleve
+        console.log(resulta)
+
+        tableau_eleve.sort((E1,E2)=>{
+            if(E1.Note>E2.Note){
+                return 1
+            }else{   
+                return -1
+            }
+        })
+
+        console.log(tableau_eleve)
+    </script>
+</body>
+</html>

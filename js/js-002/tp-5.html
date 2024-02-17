@@ -1,0 +1,26 @@
+<script>
+    var num1;
+    var num2;
+    do{
+        num1 = Number(prompt("Donner le premier Numero superieur de 1"));
+    }while(num1<=1);
+
+    do{
+        num2 = Number(prompt("Donner le deuxieme Numero superieur de "+num1));
+    }while(num2 <= num1);
+    for(let i = num1; i <= num2; i++){
+        var nbrDiviseur = 0;
+        for(let j = 1 ; j <= i ; j++){
+            if(i%j == 0){
+                nbrDiviseur++
+            }
+            if(nbrDiviseur == 3){
+                break;
+            }
+            // nbrDiviseur == 3
+        }
+        if(nbrDiviseur == 2){
+            console.log("la nombre "+ i +" est premier");
+        }
+    }
+</script>

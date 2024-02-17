@@ -1,0 +1,235 @@
+<!-- La page d'accueil : Index.html -->
+<!-- VS-code stricture de base "!" + "Entré" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emploi du temps</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Séléctioner la balise Body*/
+        body{
+            /* La largeur égale la largeur de la fenêtre */
+            width: 100vw;
+
+            /* La hauteur égale la hauteur de la fenêtre */
+            height: 100vh;
+
+            /* L’image de fond c’est « bg-login.jpg »*/
+            background-image: url(./img/bg-login.jpg);
+
+            /* La taille de l’image de fond est : 200px*/
+            background-size: 200px;
+        }
+
+        /* Séléctioner la balise Header*/
+        header{
+            /* La largeur égale la largeur de l’élément père*/
+            width: 100%;
+
+            /* Centrer le texte*/
+            text-align: center;
+        }
+
+        /* Selection la balise qui à l'id : logo_img */
+        #logo_img{
+            /* La hauteur est : 150 px*/
+            height: 150px;
+        }
+        
+        /* Séléctioner la balise H1*/
+        h1{
+            /* Couleur du texte : #771f94*/
+            color :#771f94;
+        }
+
+        #span_titre{
+            /* Style d’écriture : italique */
+            font-style: italic;
+
+            /* L’épaisseur du texte : Gras*/
+            font-weight: bold;
+
+            /* Couleur du texte : #941f29*/
+            color : #941f29;
+        }
+    </style>
+</head>
+<body>
+    <!-- Le header de la page -->
+    <header>
+        <!-- La balise img pour ajouter l'image -->
+        <!-- Pour les chemin des fichiers commançer par "./" -->
+        <!-- src : l'amplacemnt image -->
+        <!-- id : identifiant unique d'un element -->
+        <img src="./img/logo.png" alt="" id="logo_img">
+
+        <!-- Titre de la page : H1 -->
+        <h1>Emploi du temps <span id="span_titre">de 2022/2023</span></h1>
+    </header>
+    <table>
+        <!-- TR : declaration de ligne -->
+        <tr id="ligne_1">
+            <!-- TD : declaration des cellules -->
+            <td>
+                Horaire
+                <br>
+                Jour
+            </td>
+            <td>
+                08 => 10
+            </td>
+            <td>
+                10 => 12
+            </td>
+            <td>
+                12 => 14
+            </td>
+            <td>
+                14=> 16
+            </td>
+            <td>
+                16=> 18
+            </td>
+        </tr>
+        <tr>
+            <!-- TD : declaration des cellules -->
+            <td class="col_1">
+                Lundi
+            </td>
+            <td class="col_cours">
+                Français
+                <!-- BR : retoyrner à la ligne -->
+                <br>
+                Salle : 3
+            </td>
+            <td class="col_cours">
+                Arabe
+                <br>
+                Salle : 5
+            </td>
+            <td class="col_vide">
+                Pause déjeuner
+            </td>
+            <td class="col_vide">
+                
+            </td>
+            <td class="col_cours">
+                Maths 
+                <br>
+                Salle : 1
+            </td>
+        </tr>
+        <tr>
+            <!-- TD : declaration des cellules -->
+            <td class="col_1">
+                Mardi
+            </td>
+            <td class="col_cours">
+                Sport
+                <br>
+                Salle : 9
+            </td>
+            <td class="col_cours">
+                Informatique
+                <br>
+                Salle : 1
+            </td>
+            <td class="col_vide">
+                Pause déjeuner
+            </td>
+            <td class="col_vide">
+                
+            </td>
+            <td class="col_vide">
+                
+            </td>
+        </tr>
+        <tr>
+            <!-- TD : declaration des cellules -->
+            <td class="col_1">
+                Mercredi
+            </td>
+            <td class="col_cours">
+                Physique 
+                <br>
+                Salle : 7
+            </td>
+            <td class="col_vide">
+                
+            </td>
+            <td class="col_vide">
+                Pause déjeuner
+            </td>
+            <td class="col_cours">
+                SVT
+                <br>
+                Salle : 9
+            </td>
+            <td class="col_cours">
+                Math 
+                <br>
+                Salle : 1
+            </td>
+        </tr>
+        <tr>
+            <!-- TD : declaration des cellules -->
+            <td class="col_1">
+                Jeudi
+            </td>
+            <td class="col_vide">
+                
+            </td>
+            <td class="col_cours">
+                Anglais 
+                <br>
+                Salle : 2
+            </td>
+            <td class="col_vide">
+                Pause déjeuner
+            </td>
+            <td class="col_cours"> 
+                Physique
+                <br>
+                Salle : 1
+            </td>
+            <td class="col_cours">
+                SVT 
+                <br>
+                Salle : 4
+            </td>
+        </tr>
+        <tr>
+            <!-- TD : declaration des cellules -->
+            <td class="col_1">
+                Vendredi
+            </td>
+            <td class="col_cours">
+                Anglais
+                <br>
+                Salle : 1
+            </td>
+            <td class="col_cours">
+                Français 
+                <br>
+                Salle : 11
+            </td>
+            <td class="col_vide">
+                Pause déjeuner
+            </td>
+            <td class="col_cours">
+                Arabe 
+                <br>
+                Salle : 1
+            </td>
+            <td class="col_cours">
+                Informatique 
+                <br>
+                Salle : 6
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+

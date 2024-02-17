@@ -1,0 +1,52 @@
+header {
+    width: 100vw;
+    background-color: blueviolet;
+}
+#tableHeader{
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    color : #a6dede
+}
+#t-rechrche{
+    padding: 0;
+}
+#h-col-1{
+    width: 20%;
+}
+#h-col-1-img{
+    height: 60px;
+    width: auto;
+}
+#h-col-2{
+    width: 50%;
+}
+#h-col-3{
+    width: 30%;
+}
+.h-col-2-link{
+    color: rgb(166, 222, 222);
+    text-decoration: none;
+}
+
+.h-col-2-link:hover{
+    color: rgb(247, 166, 34);
+    text-decoration-line: underline;
+}
+.inputStyle{
+    border-width: 2px;
+    border-radius: 12px;
+    border-style: solid;
+    border-color: brown;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#btn-recherche{
+    background-color: crimson;
+    color: #fff;
+}
+#btn-recherche:active{
+    color: crimson;
+    background-color: #fff;
+}

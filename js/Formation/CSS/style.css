@@ -1,0 +1,105 @@
+body{
+    width: 100vw;
+    padding: 0px !important;
+    margin: 0px ;
+}
+#header {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 20;
+    display: flex;
+    width: 96vw;
+    margin: 0 auto;
+    padding: 2vw;
+    background-color: #00d0fd;
+    border-radius: 0px 0px 30px 30px;
+    box-shadow: 0px 5px 5px black;
+}
+header>#divLogo>img{
+    width: 10vw;
+}
+#divLogo, #divRech{
+    width: 30%;
+}
+#divNav{
+    width: 40%;
+}
+#divNav nav{
+    padding-top: 50px;
+    text-align: center;
+}
+.nav-home{
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.nav-home:hover{
+    color: #ee0ef1;
+    text-decoration: underline ;
+    font-weight: bold;
+    background-color: #00759b;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#divRech form{
+    text-align: center;
+}
+#divRech input[type="text"] {
+    padding : 2px 5px;
+    height: 2em;
+    border-radius: 5px;
+    width: 70%;
+    margin-bottom: 5px;
+}
+
+#divRech button{
+    width: 30%;
+    border: none;
+    border-radius: 13px;
+    padding: 5px;
+    background-color: white;
+}
+#divRech button:active{
+    background-color: aliceblue;
+}
+#divRech button>img{
+    width: 25px;
+}
+footer{
+    background-color: #a6049d;
+    padding: 3vw 2vw;
+    color: white;
+}
+footer.ligne>.links>ul>li{
+    list-style: square;
+}
+
+footer.ligne>.links>ul>li>a{
+    color: white;
+}
+.champ{
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    padding: 3px 10px;
+}
+input.champ{
+    height: 2em;
+}
+.ligne{
+    display: flex;
+    justify-content: space-around;
+}
+.contact button{
+    width: 100%;
+    height: 2em;
+    font-size: 1.7em;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+}
+

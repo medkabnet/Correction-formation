@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      /* Ajoutez votre feuille de style CSS ici */
+      .task-container {
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .task {
+        padding: 10px;
+        border-bottom: 1px solid lightgray;
+      }
+
+      .task input[type="checkbox"] {
+        margin-right: 10px;
+      }
+
+      .task label {
+        cursor: pointer;
+      }
+
+      .completed {
+        text-decoration: line-through;
+        color: gray;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: lightgray;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+    <title>To-Do Liste</title>
+  </head>
+  <body>
+    <div class="task-container">
+      <h1>Liste de tâches liées à la programmation</h1>
+      <div class="task">
+        <input type="checkbox" id="task-1">
+        <label for="task-1" id="label-task-1"  class="label-task">Apprendre une nouvelle technologie</label>
+      </div>
+      <div class="task">
+        <input type="checkbox" id="task-2">
+        <label for="task-2" id="label-task-2"  class="label-task">Mettre en œuvre une architecture logicielle</label>
+      </div>
+      <div class="task">
+        <input type="checkbox" id="task-3">
+        <label for="task-3" id="label-task-3"  class="label-task">Résoudre un bug complexe</label>
+      </div>
+      <div class="task">
+        <input type="checkbox" id="task-4">
+        <label for="task-4" id="label-task-4"  class="label-task">Créer une documentation claire et complète</label>
+      </div>
+      <button id="valider" >Valider</button>
+      <button id="valider2" >Valider2</button>
+    </div>
+    <script>
+      var task_1 = document.getElementById("task-1");
+      var task_2 = document.getElementById("task-2");
+      var task_3 = document.getElementById("task-3");
+      var task_4 = document.getElementById("task-4");
+
+      var label_task_1 = document.getElementById("label-task-1");
+      var label_task_2 = document.getElementById("label-task-2");
+      var label_task_3 = document.getElementById("label-task-3");
+      var label_task_4 = document.getElementById("label-task-4");
+
+      var valider = document.getElementById("valider");
+      valider.addEventListener("click",()=>{
+        if(task_1.checked){
+          label_task_1.classList.add("completed");
+        }
+        else{
+          label_task_1.classList.remove("completed");
+        }
+
+        if(task_2.checked){
+          label_task_2.classList.add("completed");
+        }
+        else{
+          label_task_2.classList.remove("completed");
+        }
+
+        if(task_3.checked){
+          label_task_3.classList.add("completed");
+        }
+        else{
+          label_task_3.classList.remove("completed");
+        }
+
+        if(task_4.checked){
+          label_task_4.classList.add("completed");
+        }
+        else{
+          label_task_4.classList.remove("completed");
+        }
+      })
+
+
+      var listInput = document.getElementsByTagName("input");
+
+      var listLabel = document.getElementsByClassName("label-task");
+
+      var valider2 = document.getElementById("valider2");
+      valider2.addEventListener("click",()=>{
+        for(let i = 0 ; i < listInput.length ; i++){
+          var input = listInput[i];
+          var label = listLabel[i];
+          if(input.checked){
+            label.classList.add("completed");
+          }
+          else{
+            label.classList.remove("completed");
+          }
+        }
+
+      })
+
+    </script>
+  </body>
+</html>

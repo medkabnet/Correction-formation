@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body{
+        background-image: url("./img/whatsapp.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .chat {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      #message-container {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        overflow-y: auto;
+        height: calc(100% - 70px);
+      }
+
+      .sender-message {
+        background-color: lightblue;
+        border-radius: 20px 20px 20px 0;
+        padding: 20px;
+        color: white;
+        margin-top: 15px;
+        margin-right: 20px;
+        max-width: 60%;
+        align-self: flex-start;
+      }
+
+      .receiver-message {
+        background-color: lightgray;
+        border-radius: 20px 20px 0 20px;
+        padding: 20px;
+        color: black;
+        margin-top: 15px;
+        margin-left: 20px;
+        max-width: 60%;
+        align-self: flex-end;
+      }
+
+      #form {
+        display: flex;
+        padding: 20px;
+        background-color: white;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        box-shadow: 0px 0px 10px lightgray;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        flex-grow: 1;
+        margin-right: 20px;
+        border: none;
+        border-radius: 20px;
+      }
+
+      input[type="button"] {
+        padding: 10px 20px;
+        background-color: lightblue;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    </style>
+    <title>Chat</title>
+  </head>
+  <body>
+    <div class="chat">
+      <div id="message-container">
+        <div class="receiver-message">Bonjour! Comment puis-je vous aider aujourd'hui?</div>
+        <div class="sender-message">Bonjour! Je voulais savoir comment je peux importer un fichier JSON en utilisant JavaScript?</div>
+        <div class="receiver-message">Je suis là pour vous aider.</div>
+        <div class="sender-message">Merci</div>
+      </div>
+      <div id="form">
+        <input type="text" id="message" placeholder="Entrez votre message...">
+        <input type="button" id="envoyer" value="Envoyer">
+      </div>
+    </div>
+    <script>
+      var inputMessage = document.getElementById("message");
+      var envoyer = document.getElementById("envoyer");
+      var messageContainer = document.getElementById("message-container");
+      var isSender = true
+
+      inputMessage.addEventListener("keyup",e=>{
+        if(e.keyCode == 13){
+          ajouterMessage();
+        }
+      })
+
+      envoyer.addEventListener("click",()=>{
+        ajouterMessage();
+      })
+
+      function ajouterMessage() {
+        var message = inputMessage.value.trim();
+        if(message == ""){
+          return;
+        }
+        var nouveauMessage = document.createElement("div");
+        if(isSender){
+          nouveauMessage.classList.add("receiver-message");
+        }
+        else{
+          nouveauMessage.classList.add("sender-message");
+        }
+        nouveauMessage.innerHTML = message;
+        messageContainer.appendChild(nouveauMessage);
+        inputMessage.value = "";
+        isSender = !isSender;
+      }
+    </script>
+  </body>
+</html>
+
+
+<!-- 
+  Lien : http://192.168.68.100:5500/chatApp/index.html
+ -->

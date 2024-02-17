@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Exercice 5</title>
+</head>
+<body>
+    <h1>Exercice 5</h1>
+    <form id="monFormulaire">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom"><br><br>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="motDePasse">Mot de passe :</label>
+        <input type="password" id="motDePasse" name="motDePasse"><br><br>
+
+        <input type="radio" id="genreHomme" name="genre" value="Homme">
+        <label for="genreHomme">Homme</label>
+        <input type="radio" id="genreFemme" name="genre" value="Femme">
+        <label for="genreFemme">Femme</label><br><br>
+
+        <label for="ville">Ville :</label>
+        <select id="ville" name="ville">
+            <option value="Fès">Fès</option>
+            <option value="Rabat">Rabat</option>
+            <option value="Casablanca">Casablanca</option>
+            <option value="Tanger">Tanger</option>
+        </select><br><br>
+
+        <label for="commentaire">Commentaire :</label><br>
+        <textarea id="commentaire" name="commentaire" rows="4" cols="50"></textarea><br><br>
+
+        <input type="checkbox" id="accepteConditions" name="accepteConditions">
+        <label for="accepteConditions">J'accepte les conditions</label><br><br>
+
+        <button type="button" id="creerJSON">Créer un Objet JSON</button>
+    </form>
+    <script>
+        var creerJSON = document.getElementById("creerJSON");
+        creerJSON.addEventListener("click",()=>{
+            var nom_input  =  document.getElementById("nom");
+            var nom = nom_input.value;
+            var email_input  =  document.getElementById("email");
+            var email = email_input.value;
+            var motDePasse_input  =  document.getElementById("motDePasse");
+            var motDePasse = motDePasse_input.value;
+
+            var genreFemme = document.getElementById("genreFemme");
+            var genreHomme = document.getElementById("genreHomme");
+            var genre = "";
+            if(genreFemme.checked == true){
+                genre = "Femme";
+            }
+            if(genreHomme.checked == true){
+                genre = "Homme";
+            }
+
+
+            var ville_input  =  document.getElementById("ville");
+            var ville = ville_input.value;
+            var commentaire_input  =  document.getElementById("commentaire");
+            var commentaire = commentaire_input.value;
+
+            var accepteConditions = document.getElementById("accepteConditions");
+            var accepter = "";
+            if(accepteConditions.checked == true){
+                accepter = "oui";
+            }else{
+                accepter = "non";
+            }
+
+
+            var Mon_JSON = {
+                "nom" : nom,
+                "email" : email,
+                "mot_de_pass" : motDePasse,
+                "genre" : genre,
+                "ville" : ville,
+                "commentaire" : commentaire,
+                "accepter" :accepter
+            }
+            console.log(Mon_JSON);
+        })
+
+    </script>
+</body>
+</html>

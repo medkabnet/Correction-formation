@@ -1,0 +1,63 @@
+table{
+    /* La largeur égales : 70%*/
+    width: 70%;
+    /* Les marges externe des côtés droit et gauche avec une valeur de : 15%*/
+    margin-left: 15%;
+    margin-right: 15%;
+
+    /* Une bordure au tour du tableau d’une couleur noire, d’un taille de 3px, et d’un style solide*/
+    /* Couleur de la bordure*/
+    border-color: black;
+    /* L'aipesseur de la bordure*/
+    border-width: 3px;
+    /* Style de la bordure*/
+    border-style: solid;
+
+    /* Les marges interne de 10 px*/
+    padding: 10px;
+
+    /* Les coin arrondi de 20 px*/
+    border-radius: 20px;
+
+    /* Un couleur de fond : #c42aa295*/
+    background-color: #c42aa395;
+}
+
+#ligne_1{
+    /* Les marges internes du coté haut et bas avec une valeur de 5px*/
+    padding-top:  5px;
+    padding-bottom: 5px;
+
+    text-align: center;
+
+    background-color: rgb(2, 16, 31);
+
+    color : #FFFFFF;
+}
+
+.col_1{
+  background-color: rgb(45, 45, 45);  
+
+  color: #fff;
+
+  font-weight: bold;
+
+  text-align: center;
+}
+
+.col_vide{
+    background-color: #581d58;
+    color : #FFF;
+    font-weight: bold;
+    text-align: center;
+
+    /*La taille du texte : 15px*/
+    font-size: 15px;
+
+    padding-top:  15px;
+}
+
+.col_cours{
+    background-color: #9f9f9f;
+    color : #1a1a1a;
+}

@@ -1,0 +1,67 @@
+#content{
+    width: 100%;
+    background-color: #96ecff;
+    margin-top: 110px;
+}
+
+#imgHeader{
+    width: 100%;
+    margin: 0 auto;
+}
+#imgHeader img{
+    width: 100%;
+}
+
+#courSection{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+#courSection table{
+   width: 100%;
+}
+#courSection table>tbody>tr>td{
+    background-color: #ff83e9;
+}
+#courSection table>thead>tr>td , #courSection table>tbody>tr>td:first-child{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+#courSection table>tbody>tr>td.vide{
+    background-color: #618fff;
+}
+
+#live,#populaire{
+    font-weight: bold;
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+#FormationSection{
+    margin-top: 2vw;
+    padding : 5px 5vw;
+    text-align: center;
+}
+#sep{
+    height: 20vh;
+    width: 100%;
+    background-image: linear-gradient(180deg, #96ecff,white);
+}
+#ProduitSection{
+    margin-top: 0;
+    margin-bottom: 5vw;
+    padding-top: 5vw;
+    background-color: white;
+    text-align: center;
+}
+#ProduitSection h3{
+    margin-top: 0px;
+}
+
+.formation{
+    text-align: center;
+}
+.formation img{
+    width: 50%;
+}

@@ -1,0 +1,26 @@
+<script>
+    var numbre= Number (prompt(" enter numbre de bagage"));
+    var prix_total=0;
+    var premier = true;
+    for (var i=1;i<=numbre;i++){
+        var poit=Number(prompt("enter pois de bagage"));
+        if(poit<10){
+            if(premier){
+                prix_total+=0
+                premier = false;
+            }
+            else{
+                prix_total+=25;
+            }
+        }
+        if(poit>=10&&poit<30){
+            var prix_bagague=(poit-10)*10
+            prix_total+=prix_bagague
+        } 
+        if(poit>=30){
+            var prix_bagague=(20/10)+(poit-30)*15
+            prix_total+=prix_bagague
+        }
+    }
+    alert(prix_total)
+</script>

@@ -1,0 +1,64 @@
+<script>
+    // A
+   var tableauFormation = [
+        ["Informatique",100,"A1"],
+        ["Développement web",150,"A1"],
+        ["Infographie",100,"A2"],
+        ["Conception 3D",200,"A2"],
+   ];
+
+    var tableauJsonFormation = [
+        {
+            "formation" : "Informatique",
+            "prix" : 100,
+            "salle" : "A1"
+        },
+        {
+            "formation" : "Développement web",
+            "prix" : 150,
+            "salle" : "A1"
+        },
+        {
+            "formation" : "Infographie",
+            "prix" : 100,
+            "salle" : "A2"
+        },
+        {
+            "formation" : "Conception 3D",
+            "prix" : 200,
+            "salle" : "A2"
+        }
+    ];
+   // B - 1
+   tableauFormation[0][1] = 150;
+
+   // B - 2
+   tableauFormation[3][2] = "A3";
+   
+   // B - 3
+   tableauFormation[2] = ["Conception Graphique", 150, "A3"];
+
+   // C
+   var nouvelLigne = ["Robotique" , 150, "A1"];
+   tableauFormation.push(nouvelLigne);
+
+   console.log(tableauFormation);
+
+   // D
+   var formationSalleA1 = tableauFormation.filter(formation=>{
+    if(formation[2]=="A1"){
+        return formation;
+    }
+   });
+   console.log(formationSalleA1);
+
+   // E
+   var tableauNomFormations = [];
+   for(let i = 0 ; i < tableauFormation.length ; i++){
+        var nomFormation = tableauFormation[i][0];
+        tableauNomFormations.push(nomFormation)
+   }
+   console.log(tableauNomFormations);
+
+
+</script>

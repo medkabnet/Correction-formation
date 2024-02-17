@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Exercice 1</title>
+    </head>
+    <body>
+        <h1>Exercice 1</h1>
+        <button id="btnCreerElement">Créer un paragraphe</button>
+        <div id="ajouter_paragraphe"></div>
+        <script>
+            var btnCreerElement = document.getElementById("btnCreerElement");
+            btnCreerElement.addEventListener("click",()=>{
+                var nouveauParagraphe = document.createElement("p");
+                nouveauParagraphe.innerHTML = "Nouveau paragraphe ajouté.";
+                var ajouter_paragraphe = document.getElementById("ajouter_paragraphe"); 
+                ajouter_paragraphe.appendChild(nouveauParagraphe);
+            })
+        </script>
+    </body>
+</html>

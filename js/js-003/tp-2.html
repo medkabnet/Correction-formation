@@ -1,0 +1,24 @@
+<script> 
+    // A
+    var tableauValeur=[12, 13, 9, 10, 7, 12];
+
+    // B
+    // somme = tableauValeur[0] + tableauValeur[1] +tableauValeur[2]+tableauValeur[3] + tableauValeur[4] +tableauValeur[5];
+    var somme = 0  ;
+    for( let i = 0 ; i < tableauValeur.length ; i++){
+        somme += tableauValeur[i];
+    }
+    console.log(somme);
+
+    // C
+    var moyenne = somm / tableauValeur.length;
+    console.log(moyenne);
+
+    // D
+    var tabelauSup11 = tableauValeur.filter(number =>{
+        if(number > 11){
+            return number;
+        }
+    })
+    console.log(tabelauSup11);
+</script>

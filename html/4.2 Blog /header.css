@@ -1,0 +1,27 @@
+#logo_header{
+    height: 50px;
+    width: auto;
+}
+.navbar-light{
+    background-color: blueviolet;
+}
+.navbar-nav{
+    background-color: rgb(182, 138, 223);
+    border-radius: 5px;
+}
+
+#blockTitre{
+    /* Ne pas repeter l'iamge */
+    background-repeat: no-repeat;
+    /* L'image prend la largeur du bloque */
+    background-size: cover;
+    /* L'image se centre au bloque */
+    background-position: center;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#titrePage{
+    background-color: rgba(137, 43, 226, 0.505);
+    text-align: center;
+}

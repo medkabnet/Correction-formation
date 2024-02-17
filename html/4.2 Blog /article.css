@@ -1,0 +1,10 @@
+#blockTitre{
+    background-image: url(./assets/img/articleHeader.jpg);
+}
+.par-img{
+    width: 100%;
+    height: auto;
+}
+.para{
+    text-align: justify;
+}

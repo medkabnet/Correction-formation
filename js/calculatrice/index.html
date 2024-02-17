@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .calculator {
+            width: 400px;
+            height: 500px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: lightgray;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        #display {
+            height: 100px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+        
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+        
+        .btn {
+            height: 55px;
+            width: 80px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding-top: calc((80px - 36px)/2);
+            font-size: 36px;
+            cursor: pointer;
+        }
+        
+        .btn:active {
+            background-color: brown;
+        }
+    </style>
+    <title>Calculatrice</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <div id="display">0</div>
+        <div class="buttons">
+            <div class="btn">1</div>
+            <div class="btn">2</div>
+            <div class="btn">3</div>
+            <div class="btn">+</div>
+            <div class="btn">4</div>
+            <div class="btn">5</div>
+            <div class="btn">6</div>
+            <div class="btn">-</div>
+            <div class="btn">7</div>
+            <div class="btn">8</div>
+            <div class="btn">9</div>
+            <div class="btn">*</div>
+            <div class="btn">C</div>
+            <div class="btn">0</div>
+            <div class="btn">=</div>
+            <div class="btn">/</div>
+        </div>
+    </div>
+</body>
+<script>
+    eval("console.log('text dans aval')");
+    function calculerOperation(oparation){
+        var resulta = eval(oparation);
+        return resulta;
+    }
+
+    var bouton = document.getElementsByClassName("btn")
+    var display = document.getElementById("display")
+    var symlbolOperation = ["+", "-", "*", "/"];
+    for (let i = 0; i < bouton.length; i++) {
+        bouton[i].addEventListener("click", e => {
+            var value = e.target.innerHTML
+            var dernierChar = display.innerHTML[display.innerHTML.length - 1];
+            if(value == "C"){
+                display.innerHTML = "0"
+            }
+            else if(value == "="){
+                if(symlbolOperation.includes(dernierChar) == true){
+                    alert("Erreur syntax")
+                }else{
+                    display.innerHTML = calculerOperation(display.innerHTML);
+                }
+                
+            }
+            else if(display.innerHTML == "0"){
+                if(symlbolOperation.includes(value) == true){
+                    alert("Erreur syntax")
+                }
+                else{
+                    display.innerHTML = value
+                }
+            }
+            else{
+                if(symlbolOperation.includes(dernierChar) == true && symlbolOperation.includes(value) == true){
+                    alert("Erreur syntax")
+                }
+                else{
+                    display.innerHTML += value
+                }
+            }
+        })
+    }
+</script>
+<!-- 
+  http://192.168.68.100:5500/calculatrice/index.html
+ -->
+
+</html>

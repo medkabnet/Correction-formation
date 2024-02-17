@@ -1,0 +1,22 @@
+<script>
+    var numero = Number(prompt("Donner un nombre Entre 1 et 100"));
+
+    // Gener un nombre entre 1 et 100
+    let nombreAleatoire = Math.floor(Math.random() * 100) + 1;
+
+    if(numero<= 100 && numero >= 1){
+        if(numero>nombreAleatoire){
+            alert("Numero Supérieur");
+        }
+        else if(numero<nombreAleatoire){
+            alert("Numero Inférieur");
+        }
+        else{
+            alert("Numero Egal");
+        }
+    }
+    else{
+        alert("Erreur");
+    }
+
+</script>

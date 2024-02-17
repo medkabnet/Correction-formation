@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <title>Ma Page d'acceil</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <table id="tableHeader">
+            <tr>
+                <td id="h-col-1">
+                    <img src="./asset/logo_tp.png" alt=""  id="h-col-1-img">
+                </td>
+                <td id="h-col-2">
+                    <nav>
+                        <a href="#" class="h-col-2-link">Accueil</a> | 
+                        <a href="#" class="h-col-2-link">Blog</a> | 
+                        <a href="#" class="h-col-2-link">Formation</a> | 
+                        <a href="#" class="h-col-2-link">Nous contacter</a>
+                    </nav>
+                </td>
+                <td id="h-col-3">
+                    <table id="t-rechrche">
+                        <tr>
+                            <td>
+                                <label for="">Mots clés</label>
+                            </td>
+                            <td>
+                                <input class="inputStyle" type="text" name="" id="">
+                            </td>
+                        </tr>
+                    </table>
+                    <button id="btn-recherche" class="inputStyle">Recherche</button>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <section>
+        <img id="img-header" src="./asset/banniere.jpeg" alt="">
+
+
+        <div id="div_formation">
+            <div class="titleLine">
+                <h3 class="titleLine-h3">
+                    Nos Formations
+                </h3>
+            </div>
+            <table id="formation">
+                <tr>
+                    <td class="formation-td">
+                        <img src="./asset/Formation/html.png" alt="" class="formation-img">
+                    </td>
+                    <td class="formation-td">
+                        <img src="./asset/Formation/css.png" alt="" class="formation-img">
+                    </td>
+                    <td class="formation-td">
+                        <img src="./asset/Formation/js.png" alt="" class="formation-img">
+                    </td>
+                    <td class="formation-td">
+                        <img src="./asset/Formation/php.png" alt="" class="formation-img">
+                    </td>
+                    <td class="formation-td">
+                        <img src="./asset/Formation/phpMyAdmin.png" alt="" class="formation-img">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="separateur">
+
+        </div>        
+        <div id="div_produit">
+            <div class="titleLine">
+                <h3 class="titleLine-h3">
+                    Nos Produit
+                </h3>
+            </div>
+            <table id="produit">
+                <tr>
+                    <td class="productImg" id="p1">
+                       
+                    </td>
+                    <td  class="productImg" id="p2">
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <table id="tablefooter">
+            <td>
+                <tr>
+                    <td id="tablefooter-col-1">
+                        <h6>Lien Utile</h6>
+                        <ul>
+                            <li><a href="#">Condition générale d'utilisation</a></li>
+                            <li><a href="#">Mention légale</a></li>
+                            <li><a href="#">Politique de cookies</a></li>
+                        </ul>
+                    
+                    </td>
+                    <td>
+                        <h6>Nos Réseaux</h6>
+                        <table id="tableReseau">
+                            <tr>
+                                <td>
+                                    <a href="">
+                                        <img src="./asset/Reseau/logoInsta.png" alt="">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="">
+                                        <img src="./asset/Reseau/logoFB.png" alt="">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="">
+                                        <img src="./asset/Reseau/logoTwitter.png" alt="">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="">
+                                        <img src="./asset/Reseau/logoYoutube.png" alt="">
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td id="tablefooter-col-2">
+                        <h6>Nous Contacter</h6>
+                        <form action="">
+                            <input type="text" name="" id="" class="tablefooter-col-2-input" placeholder="Votre nom">
+                            <br>
+                            <input type="email" name="" id="" class="tablefooter-col-2-input" placeholder="Votre Email">
+                            <br>
+                            <input type="text" name="" id="" class="tablefooter-col-2-input" placeholder="Votre Objet">
+                            <br>
+                            <textarea name="" id="" class="tablefooter-col-2-input" cols="30" rows="10" placeholder="Votre message"></textarea>
+                            <br>
+                            <button class="tablefooter-col-2-input">Envoyer</button>
+                        </form>
+                    </td>
+
+                </tr>
+            </td>
+        </table>
+    </footer>
+</body>
+</html>

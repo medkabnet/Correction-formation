@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var client = {
+            "Nom" : "El Aissaoui",
+            "Prénom" : "Amine",
+            "Lieu de Naissance" : "Fès",
+            "Date De Naissance" : "15/06/2002",
+            "Genre" : "Homme",
+        };
+    
+        client.Email = "El_Aissaoui@email.com";
+        client["Email"] = "El_Aissaoui@email.com";
+    
+        delete client.Genre;
+        console.log(client);
+    </script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>JavaScript Quiz</title>
+    <style>
+      /* Mettre votre CSS ici */
+      .quiz-container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 30px;
+        background-color: #f2f2f2;
+      }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+        }
+
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button#submit-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: lightblue;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        .table-container {
+            display: flex;
+            justify-content: center;
+          }
+          
+          table {
+            background-color: white;
+            width: 75%;
+            border-collapse: collapse;
+          }
+          
+          th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+          }
+          
+          th {
+            background-color: lightgray;
+          }
+          .bg_valid{
+            background-color: rgb(14, 137, 8);
+          }
+          .bg_noValid{
+            background-color: rgb(173, 30, 30);
+          }
+    </style>
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h1>JavaScript Quiz</h1>
+        <form>
+            <h2>Question 1</h2>
+            <p>Quel est le type de données représentant une valeur booléenne en JavaScript ?</p>
+            <label>
+                <input type="radio" class="question1" name="question1" value="string" data-correct="false">
+                string
+            </label>
+            <label>
+                <input type="radio" class="question1" name="question1" value="boolean" data-correct="true">
+                boolean
+            </label>
+            <label>
+                <input type="radio" class="question1" name="question1" value="number" data-correct="false">
+                number
+            </label>
+
+            <h2>Question 2</h2>
+            <p>C'est Quoi un DOM ?</p>
+            <label>
+                <input type="radio" class="question2" name="question2" value="Une valeur Numérique" data-correct="false">
+                Une valeur Numérique
+            </label>
+            <label>
+                <input type="radio" class="question2" name="question2" value="Code CSS" data-correct="false">
+                Code CSS
+            </label>
+            <label>
+                <input type="radio" class="question2" name="question2" value="Un élément HTML " data-correct="true">
+                Un élément HTML 
+            </label>
+
+            <h2>Question 3</h2>
+            <p>C'est Quoi "Const"?</p>
+            <label>
+                <input type="radio" class="question3" name="question3" value="Une constant" data-correct="true">
+                Une constant
+            </label>
+            <label>
+                <input type="radio" class="question3" name="question3" value="Une variable " data-correct="false">
+                Une variable 
+            </label>
+            <label>
+                <input type="radio" class="question3" name="question3" value="Un tableau" data-correct="false">
+                Un tableau
+            </label>
+        </form>
+      <button id="submit-button">Soumettre les réponses</button>
+    </div>
+    <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th>Resulta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Quel est le type de données représentant une valeur booléenne en JavaScript ?</td>
+              <td id="rep1"></td>
+            </tr>
+            <tr>
+              <td>C'est Quoi un DOM ?</td>
+              <td id="rep2"></td>
+            </tr>
+            <tr>
+              <td>C'est Quoi "Const"?</td>
+              <td id="rep3"></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <script>
+      var question1 = document.getElementsByClassName("question1");
+      var question2 = document.getElementsByClassName("question2");
+      var question3 = document.getElementsByClassName("question3");
+      var submit_button = document.getElementById("submit-button");
+      var rep1 = document.getElementById("rep1");
+      var rep2 = document.getElementById("rep2");
+      var rep3 = document.getElementById("rep3");
+      
+      var mesReponses = [-1,-1,-1];
+      
+      for(let i = 0 ; i < question1.length; i++){
+          var radio1 = question1[i];
+          radio1.addEventListener("change",(e)=>{
+              var value = e.target.value;
+              var data_correct = e.target.getAttribute("data-correct");
+              mesReponses[0] = {
+                  "value" : value,
+                  "data_correct" : data_correct
+              };
+          });
+
+          var radio2 = question2[i];
+          radio2.addEventListener("change",(e)=>{
+              var value = e.target.value;
+              var data_correct = e.target.getAttribute("data-correct");
+              mesReponses[1] = {
+                  "value" : value,
+                  "data_correct" : data_correct
+              };
+          });
+
+          var radio3 = question3[i];
+          radio3.addEventListener("change",(e)=>{
+              var value = e.target.value;
+              var data_correct = e.target.getAttribute("data-correct");
+              mesReponses[2] = {
+                  "value" : value,
+                  "data_correct" : data_correct
+              };
+          });
+      }
+      
+      submit_button.addEventListener("click",(e)=>{
+          //Verifier si l'utilisateur à repondu a tout les questions
+          if(mesReponses.includes(-1)){
+              // si oui afficher le messag d'erreur
+              alert("repondre à tout les questions");
+              // puit quitter la fonction
+              return;
+          }
+          rep1.innerHTML = mesReponses[0].value;
+          if(mesReponses[0].data_correct == "true"){
+              rep1.classList.remove("bg_noValid");
+              rep1.classList.add("bg_valid");
+          }
+          else{
+              rep1.classList.remove("bg_valid");
+              rep1.classList.add("bg_noValid");
+          }
+          rep2.innerHTML = mesReponses[1].value;
+          if(mesReponses[1].data_correct == "true"){
+              rep2.classList.remove("bg_noValid");
+              rep2.classList.add("bg_valid");
+          }
+          else{
+              rep2.classList.remove("bg_valid");
+              rep2.classList.add("bg_noValid");
+          }
+          rep3.innerHTML = mesReponses[2].value;
+          if(mesReponses[2].data_correct == "true"){
+              rep3.classList.remove("bg_noValid");
+              rep3.classList.add("bg_valid");
+          }
+          else{
+              rep3.classList.remove("bg_valid");
+              rep3.classList.add("bg_noValid");
+          }
+      })
+    </script>
+  </body>
+</html>

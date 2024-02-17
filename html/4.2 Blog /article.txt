@@ -1,0 +1,11 @@
+**Paragraphe 1 : Qu'est-ce que HTML ?**
+HTML est un langage utilisé pour créer et structurer des pages web. Il permet aux développeurs de définir la structure logique du contenu d'une page et de le rendre accessible aux utilisateurs via des navigateurs web. Grâce à HTML, les éléments tels que les titres, les paragraphes, les images et les liens peuvent être organisés de manière cohérente pour une expérience de navigation optimale.
+
+**Paragraphe 2 : Structure d'une page web**
+Une page web comprend différentes sections qui contribuent à sa structure. La structure de base d'une page HTML se compose généralement d'un en-tête, d'un contenu principal et d'un pied de page. L'en-tête peut contenir le titre de la page et d'autres informations importantes, tandis que le contenu principal est l'endroit où se trouve le contenu principal de la page. Le pied de page contient souvent des informations supplémentaires ou des liens utiles.
+
+**Paragraphe 3 : Les éléments HTML**
+HTML offre une variété d'éléments pour représenter différents types de contenu. Par exemple, les titres sont utilisés pour structurer le contenu en utilisant des niveaux de titre allant de H1 à H6. Les paragraphes permettent de regrouper du texte, tandis que les images peuvent être utilisées pour afficher des visuels sur la page. Les liens permettent aux utilisateurs de naviguer entre différentes pages ou sections de la même page.
+
+**Paragraphe 4 : Évolution d'HTML**
+HTML a évolué au fil des ans avec de nouvelles versions et fonctionnalités. La dernière version majeure est HTML5, qui introduit de nouvelles balises et fonctionnalités pour une meilleure sémantique et une expérience utilisateur améliorée. HTML5 prend également en charge les médias intégrés, la géolocalisation, les formulaires avancés et bien plus encore. Il est important pour les développeurs de rester à jour avec les dernières spécifications HTML et de les utiliser de manière appropriée pour créer des sites web modernes et accessibles.

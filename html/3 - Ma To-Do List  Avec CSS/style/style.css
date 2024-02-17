@@ -1,0 +1,73 @@
+
+/* séléctionner tout les header */
+header{
+    background-color: darkgrey;
+    margin: 2%;
+
+    /* Ajouter une bordure au tour du header au couleur noire et la taill 1px */
+    /*border: 1px solid black;*/
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+
+    border-radius: 25px;
+
+    /* aligner les text au center */
+    text-align: center;
+}
+
+#img {
+    width: 50%;
+}
+
+/* changer `selecteur`par le sélecteur de la balise <h1> */
+h1 {
+    color: aquamarine;
+    text-decoration: underline  solid;
+}
+
+/* changer `selecteur`par le sélecteur des élements input[type="text"], input[type="password"], input[type="email"], select */
+.class_input{
+    /* largeur = 95% */
+    width: 95%;
+
+    /* hauteur = 25px */
+    height: 25px;
+
+    /* marge interne = 0 2% */
+    padding: 0 2%;
+
+    /* arrondir la bordure = 25px */
+    border-radius: 25px;
+}
+
+/* créer déclaration de style lier au formulaire avec les propriéter suivant 
+    * des marge externe de 5%
+    * des bordure noire , solide et d'une taille de 1px
+    * des marge intern de 1%
+*/
+#mon_formulaire{
+    margin: 5%;
+
+
+    border: 1px solid black;
+
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+
+    padding: 1%;
+}
+
+/* créer un déclaration de style lier à tout les balise <a> quand il sont sur voler par le cursseur 
+    * couleur du text : rouge 
+    * taille du text : 2em
+*/
+a:hover{
+    color: red;
+    font-size: 2em;
+}
+
+a:visited{
+    color: rgba(124, 19, 59, 0.692);
+}

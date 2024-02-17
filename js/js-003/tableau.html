@@ -1,0 +1,42 @@
+<script>
+    // Déclaration
+    var monTableauVide = [];
+    var monTableauAvecValeur = ["Nom","Prénom",12,true];
+    var monTableau2Dimmenssion = [
+        ["Karim",16],
+        ["Asmae",18],
+        ["Oussama",25]
+    ];
+
+    //Recupération
+    var valeurTableau = monTableauAvecValeur[1];
+    var ageOussama = monTableau2Dimmenssion[2][1];
+
+    // Modification
+    monTableauAvecValeur[2] = 15;
+
+
+    // Le nombre de cellule
+    var nbrCellulT1 = monTableauAvecValeur.length;
+    var nbrCellulT2 = monTableau2Dimmenssion[0].length;
+
+    // Ajouter au tabelau 
+    monTableauVide.push("Ajouter en bas");
+
+    var nouveauTableau = ["Ajouter","En","Haut"];
+    monTableauVide.unshift(nouveauTableau);
+
+    //Supprimer du tableau
+    // Supprmier dernier cellule
+    monTableauAvecValeur.pop();
+
+    // Supprimer premier cellule
+    monTableauVide.shift()
+
+    // supprimer index 2
+    monTableau2Dimmenssion.splice(1,1);
+
+    for(let i = 0 ; i<nbrCellulT1 ; i++){
+        console.log(monTableauAvecValeur[i]);
+    }
+</script>

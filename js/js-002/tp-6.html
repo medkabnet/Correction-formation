@@ -1,0 +1,21 @@
+<script>
+    var nbrTicket = Number(prompt("Entrer le nombre de ticket"));
+    var prixTicket = Number(prompt("Entre le prix de ticket"));
+    var nbrTicketVendu = 0;
+
+    while(nbrTicketVendu < nbrTicket){
+        var ticketVendu = confirm("Ticket vendu ?");
+        if(ticketVendu){
+            nbrTicketVendu++;
+        }
+        else{
+            var quitter = confirm("Voulez-vous quitter le programme ?");
+            if(quitter){
+                break;
+            }
+        }
+    }
+
+    alert("Nombr de ticket Vendu : "+nbrTicketVendu);
+    alert("Prix total Vendu : "+(nbrTicketVendu*prixTicket));
+</script>

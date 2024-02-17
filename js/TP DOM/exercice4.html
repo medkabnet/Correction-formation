@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Exercice 4</title>
+    <style>
+        .text-rouge{
+            color: #c91919;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercice 4</h1>
+    <p id="texteStylise">Cliquez sur les boutons pour ajouter ou supprimer la class <span class="text-rouge">.text-rouge</span>.</p>
+    <button id="btnAjouterClasse">Ajouter une classe</button>
+    <button id="btnSupprimerClasse">Supprimer la classe</button>
+    <script>
+        var btnAjouterClasse = document.getElementById("btnAjouterClasse");
+        var btnSupprimerClasse = document.getElementById("btnSupprimerClasse");
+        
+        // Selectioner une seul DOM span
+        var span = document.getElementsByTagName("span")[0];
+
+        btnAjouterClasse.addEventListener("click",()=>{
+            span.classList.add("text-rouge");
+        })
+
+        btnSupprimerClasse.addEventListener("click",()=>{
+            span.classList.remove("text-rouge");
+        })
+    </script>
+</body>
+</html>

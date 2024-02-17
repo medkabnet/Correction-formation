@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Asset/Img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Asset/Img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Asset/Img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./Asset/Img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./Asset/Img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/Section.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <style>
+
+    </style>
+    <title>Ajouter Fromation</title>
+</head>
+
+<body class="container-fluid vh-100 body_identifier">
+    <header id="header" class="w-100">
+        <div id="divLogo">
+            <img src="./Asset/Img/logo-Atlentique.png" alt="" srcset="">
+        </div>
+        <div id="divNav">
+            <nav>
+                <a class="nav-home" href="./index.html">Accueil</a> |
+                <a class="nav-home" href="#">Nos Formations</a> |
+                <a class="nav-home" href="./blog.html">Blog</a> |
+                <a class="nav-home" href="../identification/indentification.html">Identification</a> |
+                <a class="nav-home" href="#" target="_blank">Facebook</a>
+            </nav>
+        </div>
+        <div id="divRech">
+            <form action="">
+                <input type="text" placeholder="Rechercher..." name="" id="">
+                <br>
+                <button type="submit">
+                    <img src="./Asset/Img/search.png" alt="" srcset="">
+                </button>
+            </form>
+        </div>
+    </header>
+    <section id="content" class="container-md  pt-2 mb-5" style="background-color: #FFF;">
+        <div class="row mt-5">
+            <div class="col text-center">
+                <p class="h1">Cour Privé</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col border border-dark rounded p-2">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <label for="nom">Nom</label>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-8 col-lg-9">
+                        <input type="text" name="" id="nom" class="form-control">
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <label for="prenom">Prénom</label>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-8 col-lg-9">
+                        <input type="text" name="" id="prenom" class="form-control">
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-8 col-lg-9 ">
+                        <div class="input-group has-validation">
+                            <input type="email" name="" id="email" class="form-control  is-invalid" aria-describedby="emailFrom">
+                            <div id="emailFrom" class="invalid-feedback"  class="invalid-feedback">
+                                Format d'email non valide
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <label for="dateN">Date de Naissance</label>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-8 col-lg-9">
+                        <input type="date" name="" id="dateN" class="form-control">
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <label for="age">Age</label>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-8 col-lg-9 ">
+                        <div class="input-group has-validation">
+                            <input type="text" name="" id="age" value="0" class="form-control  is-invalid" readonly aria-describedby="ageForm">
+                            <div id="ageForm" class="invalid-feedback"  class="invalid-feedback">
+                                Moin de 12 ans
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <label for="formation">Formation</label>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-8 col-lg-9">
+                        <select name="" id="formation" class="form-select">
+                            <option value="" hidden  selected>Choisir un Formation</option>
+                            <option value="programmation web" >Programmation Web</option>
+                            <option value="programmation mobile" >Programmation Mobile</option>
+                            <option value="infographie" >Infographie</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <label for="formateur">Formateur</label>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-8 col-lg-9">
+                        <select name="" id="formateur" class="form-select">
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <label for="prix">Prix Seance</label>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-8 col-lg-9">
+                        <input type="text" name="" id="prix" class="form-control" readonly>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <label for="nbr_seance">Nombre de seance</label>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-8 col-lg-9">
+                        <input type="text" name="" id="nbr_seance" class="form-control">
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <label for="total">Total</label>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-8 col-lg-9">
+                        <input type="text" name="" id="total" class="form-control" readonly>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col text-center">
+                        <button class="btn btn-warning" id="vider">Vider</button>
+                    </div>
+                    <div class="col text-center">
+                        <button class="btn btn-primary" id="valider">s'inscrire</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="ligne">
+        <div class="contact">
+            <h4>Nous Contacter</h4>
+            <form action="">
+                <input type="text" placeholder="Votre Nom" class="champ" name="" id="">
+                <br>
+                <input type="email" placeholder="Votre Email" class="champ" name="" id="">
+                <br>
+                <input type="text" placeholder="Object" class="champ" name="" id="">
+                <br>
+                <textarea class="champ" placeholder="Message" name="" id="" cols="30" rows="5"></textarea>
+                <br>
+                <button>Envoyer</button>
+            </form>
+        </div>
+        <div class="links">
+            <h4>Lien Utile</h4>
+            <ul>
+                <li><a href="#">Condition générale d'utilisation (CGU)</a></li>
+                <li><a href="#">Condition Générale de vente (CGV)</a></li>
+                <li><a href="#">Politique de Cookie</a></li>
+                <li><a href="#">Politique de Confidentialité</a></li>
+                <li><a href="#">Foire Au Questions (FAQ)</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./script/function.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
